@@ -15,29 +15,311 @@ body {
     font-family: 'Merriweather', serif;
     font-size: 16px;
     line-height: 1.6;
+    max-width: 100%;
 }
-
 
 /* HLAVICKA */
-
-.titulek {
-    font-family: 'Raleway', serif;
+.text {
+    text-align: center;
+    color: white;
+    position: relative;
 }
 
+.titulek {
+    font-family: 'Raleway', serif; 
+}
+
+.autor {
+    color: #CACAD6;
+    font-style: italic;
+    margin: 0px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+}
+
+h1 {
+    margin: 0;
+    padding: 10px;
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.perex {
+    margin: 0;
+    padding: 0 30px 30px 30px;
+}
+
+.hlavicka {
+    background-image: url(images/island-hlavicka.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+}
+
+.cara1 {
+    height: 2px;
+    width: 80px;
+    background-color: silver;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 /* MENU */
+.menu {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    list-style: none;    
+}
 
+.menu li {
+    border-bottom: 1px solid rgb(230, 229, 229);
+}
 
-
+.menu a {
+    display: inline-block;
+    font-family: 'Raleway', serif; 
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(156, 156, 156);
+    padding: 5px;
+}
 
 /* OBSAH */
+h2 {
+    font-family: 'Raleway', serif; 
+    padding-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
 
+p {
+    margin-top: 0px;
+}
 
+.cara2 {
+    height: 4px;
+    width: 80px;
+    background-color: #639DDD;
+    margin-bottom: 40px;
+}
+
+.text2 {
+    padding: 0px 20px 40px 20px;
+}
+
+.text3 {
+    padding: 50px 20px 20px 20px;
+}
+
+img {
+    width: 100%;
+}
+
+.popisek {
+    font-family: 'Raleway', serif; 
+    font-size: 12px;
+    text-align: center;
+    color: gray;
+    margin: 0px;
+}
+
+a {
+    color: gray;
+    font-family: 'Raleway', serif; 
+}
 
 
 /* FOTOGALERIE */
+.foto .popisek {
+    font-weight: bold; 
+    padding-bottom: 20px;
+}
 
-
-
+.popisek-copy {
+    font-weight: normal;
+}
 
 /* PATICKA */
+.paticka {
+    font-size: 10px;
+    color: gray;
+    padding: 20px;
+    background: linear-gradient(to bottom,#DADADA, #F5F5F5);  
+}
+
+.paticka p {
+    margin-top: 10px;
+}
+
+@media (min-width: 500px) {
+    h1 {
+        font-size: 52px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .paticka p {
+        font-size: 14px;
+    }
+
+    .menu {
+        border-top: 1px solid rgb(230, 229, 229);
+        border-bottom: 1px solid rgb(230, 229, 229);
+        padding: 0;
+        margin-top: 40px;
+        margin-bottom: 60px;
+        margin-left: 20px;
+        margin-right: 20px;
+        display: flex;
+    }
+
+    .menu li {
+        display: inline;
+        border-bottom: none;
+        flex-basis: calc(100% / 4);
+        border-left: 1px solid rgb(230, 229, 229);
+    }
+
+    .menu .prvni {
+        border-left: none;
+    }
+
+    .galerie {
+        display: flex;
+        flex-wrap: wrap;    
+    }
+
+    .foto {
+        flex-basis: 50%;
+    }
+
+    img {
+        display: block;
+    }
+
+    .foto .popisek {
+        display: none;
+    }
+
+    .fotka {
+        position: relative;
+    }
+
+    .fotka .popisek {
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+    }
+
+    .popisek, .popisek a {
+        color: white; 
+        font-size: 13px;  
+    }
+}
+
+@media (min-width: 1000px) {
+    body {
+        font-size: 15px;
+    }
+
+    menu li{
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 100px;
+        padding: 100px 0 20px 0;
+    }
+
+    h2 {
+        font-size: 36px;
+    }
+
+    .perex {
+        width: 750px;
+        margin: 0 auto;
+    }
+
+    .autor {
+        padding-top: 25px;
+        padding-bottom: 160px;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 230px;
+        border: none;
+        float: left;
+        margin: 0;
+        padding: 50px 0 0 50px;
+    }
+
+    .menu li {
+        border-left: none;
+        text-align: left;
+        border-bottom: 1px solid rgb(230, 229, 229);
+        width: 100%;
+    }
+
+    .obsah {
+        width: 960px;
+        background-color: white;
+        margin: -80px auto 0 auto;  
+        box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    #uvod .text2 {
+        padding: 50px 50px 30px 280px;
+    }
+    
+    h2 {
+        padding-left: 50px;
+    }
+
+    .proc {
+        padding-left: 50px;
+        padding-right: 280px;
+    }
+
+    #videt h2, #videt .text2 {
+        padding-left: 280px;
+        padding-right: 50px;
+    }
+
+    .cara2 {
+        width: 120px;
+    }
+
+    #videt .cara2 {
+        margin-left: 230px;   
+    }
+
+    .text3 {
+        padding-left: 280px;
+        padding-right: 50px;
+    }
+
+    .foto {
+        flex-basis: calc(100% / 3);
+    }
+
+    .paticka {
+        width: 960px;
+        color: gray;
+        padding: 20px 0 20px 0;
+        margin: 0 auto;
+        background: none;  
+    }
+
+    .paticka p {
+        font-size: 13px;
+    }
+}
